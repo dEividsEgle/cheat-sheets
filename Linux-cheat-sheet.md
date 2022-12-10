@@ -41,3 +41,23 @@ Some quick reference for most common tools used at for work on daily basis.
 | --- | --- |
 | `head` | Display the first 10 (default) lines in the text |
 | `tail` | Display the last 10 line in the text |
+| `head -nl` | Display numbered lines (nl) in the text |
+| `sed` | Find and replace text |
+| `sed s/mysql/MySQL/g(or #) snort.conf > snort2.conf` | Substitute mysql with MySQL globally (on specific occurrence) |
+| `more` | Scroll through text |
+| `less` | Show less text and use / to search for terms in the text |
+| `grep` | --- |
+
+### Networkig ###
+
+| Command | Description |
+| ------------- | ----------- |
+ifconfig Display physical int ip configuration
+iwconfig Display wireless int ip config
+ifconfig eth <IP> netmask <subnet> broadcast
+<gateway>
+Change the interface ip configuration
+dhclient eht0 Reassigned IP via dhcp on eth0
+dig <address> ns/nx Find specific domain name servers/mail servers
+vm /etc/hosts Change local DNS entry
+vm /etc/resolv.conf Change DNS server
