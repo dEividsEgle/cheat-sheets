@@ -1,10 +1,6 @@
 # Linux Cheat Sheet #
 
-Some quick reference for most common tools used at for work on daily basis.
-
-* Extensions
-  * Each .cpl extension is a representation of a tool within control panel. 
-  * Each .msc extension is a representation of MS Windwos management console (snap-in).
+Linux cheat sheet that I have put toget from the time that I was familiarising myself with the os. This has helped me a lot along side the built in help tool and the manual pages.
 
 ## Linux Basics ##
 
@@ -52,12 +48,10 @@ Some quick reference for most common tools used at for work on daily basis.
 
 | Command | Description |
 | ------------- | ----------- |
-ifconfig Display physical int ip configuration
-iwconfig Display wireless int ip config
-ifconfig eth <IP> netmask <subnet> broadcast
-<gateway>
-Change the interface ip configuration
-dhclient eht0 Reassigned IP via dhcp on eth0
-dig <address> ns/nx Find specific domain name servers/mail servers
-vm /etc/hosts Change local DNS entry
-vm /etc/resolv.conf Change DNS server
+| `ifconfig` | Display physical int ip configuration |
+| `iwconfig` | Display wireless int ip configuration |
+| `ifconfig eth <IP> netmask <subnet> broadcast <gateway>` | Change the interface ip configuration |
+| `dhclient eht0` | Reassigned IP via DHCP protocol on eth0 interface |
+| `dig <address> ns/nx` | Find specific domain name servers/mail servers |
+| `vm /etc/hosts` | Change local DNS entry |
+| `vm /etc/resolv.conf` | Change DNS server |
