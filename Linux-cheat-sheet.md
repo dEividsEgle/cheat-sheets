@@ -30,9 +30,8 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `mv` | Move a file (also used to rename a file) |
 | `rm` | Remove a file |
 | `rmdir` | Remove a directory |
-
-## Text Manipulation ##
-
+  
+### Text Manipulation ###
 | Command | Description |
 | --- | --- |
 | `head` | Display the first 10 (default) lines in the text |
@@ -45,7 +44,6 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `grep` | --- |
 
 ### Networkig ###
-
 | Command | Description |
 | ------------- | ----------- |
 | `ifconfig` | Display physical int ip configuration |
@@ -55,3 +53,46 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `dig <address> ns/nx` | Find specific domain name servers/mail servers |
 | `vm /etc/hosts` | Change local DNS entry |
 | `vm /etc/resolv.conf` | Change DNS server |
+
+### Adding and Removing Software ###
+| Command |	Description |
+| --- | --- |
+| `apt-cache search <package>` |	Search for software in the repository (local) |
+| `apt-get install <package>`	| Install software stored in the local repository |
+| `apt-get remove <package>`	| Remove installed software |
+| `apt-get purge <package>`	| Remove installed software and the configuration files |
+| `apt autoremove <package>`	| Remove all the dependencies |
+| `apt-get update`	| Check and download available updates |
+| `apt-get upgrade`	| Install the downloaded updates |
+| `vm /etc/apt/sources.list` |	Add repositories to query for software |
+| `apt-get synaptic` | Run synaptic from shell (GUI based installer) |
+
+### File and Directory Permissions ###
+| Command | Description |
+| --- | --- |
+| `chown <user><dir/file>` | Change user ownership on a specific file |
+| `chgrp <group><dir>` | Change group ownership on a specific file |
+| `ls -l </dir/file>` | Check current effective permissions |
+
+<p align="center">
+Octal and Binary Representations of Permissions 
+</p>
+
+<p align="center"></p>
+<table>
+    <thead>
+        <tr>
+            <th align="left">Column1</th>
+            <th align="center">Column1</th>
+            <th align="right">Column1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left">Column1</td>
+            <td align="center">Column1</td>
+            <td align="right">Column1</td>
+        </tr>
+    </tbody>
+</table>
+<p></p>
