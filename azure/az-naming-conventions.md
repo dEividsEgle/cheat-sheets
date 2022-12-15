@@ -34,12 +34,12 @@
 #### Subscriptions ####
 | Asset type | Scope | Format | Example |
 | --- | --- | --- | --- |
-| Subscription | Account/Enterprise Agreement | <Business Unit>-<Subscription type>-<###> | mktg-prod-001 |
+| Subscription | Account/Enterprise Agreement | \<Business Unit>-\<Subscription type>-\<###> | mktg-prod-001 |
 
 #### Resource Group ####
 
 | Asset type | Scope | Format | Example |
 | --- | --- | --- | --- |
-| Resource Group | Subscription | rg-<app  /  Service name>-<Subscription type>-<###>  | rg sharepoint-prod-001 |
+| Resource Group | Subscription | rg-\<app  /  Service name>-\<Subscription type>-\<###> | rg sharepoint-prod-001 |
 
 
