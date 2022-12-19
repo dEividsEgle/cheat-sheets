@@ -1,6 +1,6 @@
 # Git cheat-sheet
 
-![[Pasted image 20221219191734.png]]
+![image](https://miro.medium.com/max/1652/1*D9HHDrEDw54JV741QkUx_w.png)
 
 ## Git Setup
 | Command                                                            | Description                                        |
