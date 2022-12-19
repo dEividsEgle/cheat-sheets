@@ -171,35 +171,37 @@ Octal and Binary Representations of Permissions
 |sda3|The third (3) partition of the SATA (a) drive|
 
 ### The Logging System ###
-| Command                                                                                  | Description                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rsyslog.conf`                                                                           | Configuration file containing rules of what to log                                                                                                                              |
-| `logrotate.conf`                                                                         | Automatically cleans up log files (archiving)                                                                                                                                   |
+| Command | Description |
+| ---- | ---- |
+| `rsyslog.conf` | Configuration file containing rules of what to log |
+| `logrotate.conf` | Automatically cleans up log files (archiving) |
 | `shred` <br/> `shred -f -n /var/log/auth.log` <br /> <ul><li>`-f`</li><li>`-n`</li></ul> | Shred the log files by generating random symbols making them indecipherable<br/> <ul><li>Give permissions to shared file</li><li>Desired number of times to overwrite</li></ul> |
 | `service <servicename>` `start/stop/restart` | Start or stop rsyslog service |
 
 ### Using and Abusing services ###
 |Command|Description|
-|:----|:----|
-| `proxychains <the command to proxy> <argument>` |Send a give command through a proxy to maintain anonymity|
-| `vim /etc/proxychains.conf` |Set proxies in a config file|
+| ---- | ---- |
+| `proxychains <the command to proxy> <argument>` | Send a give command through a proxy to maintain anonymity |
+| `vim /etc/proxychains.conf` | Set proxies in a config file |
 
 ### Inspecting Wireless Networks (WiFi) ###
 |Command|Description|
-|:----|:----|
-| `ifconfig` |List activated network interfaces|
-| `iwconfig` |View wireless network interface|
-| `iwlist <interface> scan` |Scan for all AP’s that the network card can reach|
-| `nmcli (network manager command line interface)  ncmli dev <network type>` | View wifi AP’s nearby and their key data|
-| `nmcli dev wifi connect <AP-SSID> password <password>` |Connect to AP within range|
-| `airmon-ng start/restart/stop <interface>` |Put the network card in monitor mode to see all the passing through traffic|
-| `airodump-ng wlan0mon` | Capture and display key data from broadcasting AP’s|
-| `airodump-ng -c 10 –bssid <mac-address> -w <ESSID> wlan0mon` |Capture all the packets traversing the found AP on the channel (-c) 10aireplay-ng –deauth 100 -a <mac-address> -c <man-address> wlan0mon|Force all the AP clients to re-authenticate in order to capture the password hash|
-| `aircrack-ng -w wordlist.cap -b <mac-address> <filename>` | Find the captured password from the list | 
+| ---- | ---- |
+| `ifconfig` | List activated network interfaces|
+| `iwconfig` | View wireless network interface|
+| `iwlist <interface> scan` | Scan for all AP’s that the network card can reach |
+| `nmcli (network manager command line interface)  ncmli dev <network type>` | View wifi AP’s nearby and their key data |
+| `nmcli dev wifi connect <AP-SSID> password <password>` | Connect to AP within range |
+| `airmon-ng start/restart/stop <interface>` | Put the network card in monitor mode to see all the passing through traffic |
+| `airodump-ng wlan0mon` | Capture and display key data from broadcasting AP’s |
+| `airodump-ng -c 10 –bssid <mac-address> -w <ESSID> wlan0mon` | Capture all the packets traversing the found AP on the channel (-c) 10 |
+| `aireplay-ng –deauth 100 -a <mac-address> -c <man-address> wlan0mon` | Force all the AP clients to re-authenticate in order to capture the password hash |
+| `aircrack-ng -w wordlist.cap -b <mac-address> <filename>` | Find the captured password from the list |
 
 ### Inspecting Wireless Networks (Bluetooth) ###
 |Command|Description|
 | ---- | ---- |
+<<<<<<< HEAD
 | `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig)|
 | `hcitool` |Inquiry tool: provides device name, device ID, device class, and device clock information (enables the device to work synchronously)|
 | `hcidump` |Sniff the Bluetooth communications (capture data sent over Bluetooth signal)|
@@ -208,17 +210,28 @@ Octal and Binary Representations of Permissions
 | `hcitool inq` |Gather information about the detected devices|
 | `sdptool browse <mac-address>` |Search for Bluetooth services (device does not need to be in discovery mode)|
 | `l2ping <mac-address> -c <number-of-packets>` |Send out a ping to see if the device is within reach|
+=======
+| `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig) |
+| `hcitool` | Inquiry tool: provides device name, device ID, device class, and device clock information (enables the device to work synchronously) |
+| `hcidump` | Sniff the Bluetooth communications (capture data sent over Bluetooth signal) |
+| `hciconfig <name> up` | Check that the connection is enabled |
+| `hcitool scan` | Check for Bluetooth devices sending out them discover beacons (discovery mode) |
+| `hcitool inq` | Gather information about the detected devices |
+| `sdptool browse <mac-address>` | Search for Bluetooth services (device does not need to be in discovery mode) |
+| `l2ping <mac-address> -c <number-of-packets>` | Send out a ping to see if the device is within reach |
+>>>>>>> 05cb6a33c07c9b806e92c31ce98d02edcf2236f2
 
 ### Managing the Linux Kernel and Loadable Kernel Modules
 |Command|Description|
-|:----|:----|
-| `uname -a` | Check the kernel that the system is running|
-| `cat /proc/version` | Check the kernel that the system is running (alternative way)|
-| `systl` | Tune the kernel (memory allocation, networking modules, etc.)|
-| `ksmod` | Manage kernel modulesmodinfo <module name>|Find more information about a specific module|
-| `modprobe -a <module name>` | Add a module to the kernel|
-| `modprobe -r <module name>` | Remove a module from the kernel|
-| `dsmeg` | Print out a message buffer from the kernel to see if the module has loaded successfully or returned any errors|
+| ---- | ---- |
+| `uname -a` | Check the kernel that the system is running |
+| `cat /proc/version` | Check the kernel that the system is running (alternative way) |
+| `systl` | Tune the kernel (memory allocation, networking modules, etc.) |
+| `ksmod` | Manage kernel modules | 
+| `modinfo <module name>` | Find more information about a specific module |
+| `modprobe -a <module name>` | Add a module to the kernel |
+| `modprobe -r <module name>` | Remove a module from the kernel |
+| `dsmeg` | Print out a message buffer from the kernel to see if the module has loaded successfully or returned any errors |
 
 ### Job Scheduling
 
@@ -232,9 +245,9 @@ Octal and Binary Representations of Permissions
 |   4   |      MON (Month)       |      1-12      |
 |   5   | DOW (Day of the week)  |      0-7       |
 
-| Command                                                                     | Description                                                                             |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `crontab -e`                                                                | Edit the crontab by providing the -e swtich                                             |
-| `vim /etc/crontab`                                                          | Open the crontab                                                                        |
-| `<date & time><user>bin/<backup-script.sh>`                                 | Add the line to crontab to schedule a job to execute backup script in the bin directory |
+| Command | Description |
+| ---- | ---- |
+| `crontab -e` | Edit the crontab by providing the -e swtich |
+| `vim /etc/crontab` | Open the crontab |
+| `<date & time><user>bin/<backup-script.sh>` | Add the line to crontab to schedule a job to execute backup script in the bin directory |
 | `update-rc.d <name of the script or service> remove/default/disable/enable` | Enable service or scripts to run at startup |
