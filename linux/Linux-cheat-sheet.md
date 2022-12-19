@@ -199,8 +199,8 @@ Octal and Binary Representations of Permissions
 
 ### Inspecting Wireless Networks (Bluetooth) ###
 |Command|Description|
-|:----|:----|
-| `hciconfig` |Look at the Bluetooth interfaces (works like ifconfig)|
+| ---- | ---- |
+| `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig)|
 | `hcitool` |Inquiry tool: provides device name, device ID, device class, and device clock information (enables the device to work synchronously)|
 | `hcidump` |Sniff the Bluetooth communications (capture data sent over Bluetooth signal)|
 | `hciconfig <name> up` |Check that the connection is enabled|
