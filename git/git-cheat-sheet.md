@@ -38,3 +38,14 @@
 | `.gitignore`                                                                    | Create a file within git directory where you can add specific files and/or folders to be ignored by git. File paterns can also be specified.                                                                               |
 
 ## Git Comparisons
+| Command | Description |
+| --- | --- |
+| `git diff` | Compare any modified files with the file currently in the directory and the staging area. You can set uo a tool like *p4merge* to visually compare the two files. |
+| `git diff HEAD` | Comprate the differences in the working directory and the last commit. |
+| `git diff --staged HEAD` | Compare the staging area with the last commit on the branch (HEAD). |
+| `git diff --<filename>` | Limit the difference to only specific files |
+| `git diff <ref ID> HEAD` | Compare all the changes made between the last commit and specified commit using the SHA identifiable key (`git log --oneline`). |
+| `git diff HEAD HEAD^` | Compare the head and -1. You can use any SHA ID to compare any of the files and their differences. |
+| `git diff <master of HEAD (local)><remote (github)>` <br/> `git diff main origin/main` | Compare the local repository to the remote repository |
+
+## Git Branching and Merging
