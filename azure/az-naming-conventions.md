@@ -1,11 +1,4 @@
-----
-
-- - - -
-
-
-
-
-## General ##
+# General 
 
 | Resource Type | Prefix | Name |
 | --- | ---  | ---|
@@ -35,21 +28,10 @@
 | Management group | Microsoft.Management/managementGroups | mg- |
 | Policy definition | Microsoft.Authorization/policyDefinitions | policy- |
 | Resource group | Microsoft.Resources/resourceGroups | rg- |
+- - - -
+# Resource Naming Convention
 
-#### Subscriptions ####
-| Asset type | Scope | Format | Example |
-| --- | --- | --- | --- |
-| Subscription | Account/Enterprise Agreement | \<Business Unit>-\<Subscription type>-\<###> | mktg-prod-001 |
-
-#### Resource Group ####
-| Asset type | Scope | Format | Example |
-| --- | --- | --- | --- |
-| Resource Group | Subscription | rg-\<app  /  Service name>-\<Subscription type>-\<###> | rg sharepoint-prod-001 |
-
-
-## Resources ##
-
-#### Subscriptions ####
+## Subscription Naming
 | Service | Resource Name | Environment | Scope | Format |
 | --- | --- | --- | --- | --- |
 | Subscriptions | corp-dev-001 | Development | Account/Enterprise Agreement | \<Business Unit>-\<Subscription Type>-\<###> |
@@ -57,14 +39,14 @@
 | Subscriptions | corp-prod-001 | Production | Account/Enterprise Agreement | \<Business Unit>-\<Subscription Type>-\<###> |
 | Directory | deividsegle.com | Global | Account/Enterprise Agreement | Active Directory |
 
-#### Resource Groups ####
+## Resource Group Naming
 | Service | Resource Name | Environment | Scope | Format |
 | --- | --- | --- | --- | --- |
 | Resource Group | rg-azdave-dev-001 | Development | Subscription | rg-\<App / Service Name>-\<Subscription Type>-\<###> |
 | Resource Group | rg-azdave-stage-001 | Staging | Subscription | rg-\<App / Service Name>-\<Subscription Type>-\<###> |
 | Resource Group | rg-azdave-prod-001 | Production | Subscription | rg-\<App / Service Name>-\<Subscription Type>-\<###> |
 
-#### Virtual Networking #####
+## Virtual Network Naming
 | Service | Resource Name | Environment | Scope | Format |
 | --- | --- | --- | --- | --- |
 | Virtual Network | vnet-dev-uksouth-001 | Dev | Resource Group | vnet-\<Subscription type>-\<Region>-\<###> |
@@ -85,7 +67,7 @@
 | NSG | nsg-database-allow-001 | Dev | Subnet or NIC | nsg-\<app name>-\<policy name>-\<###> |
 | Public IP | pip-azdave-dev-ncus-001 | Dev | Resource Group | pip-\<Subscription type>-\<region>-\<###> |
 
-#### Virtual Machine ####
+## Virtual Machine Naming
 | Service | Resource Name | Environment | Scope | Format |
 | --- | --- | --- | --- | --- |
 | Virtual Machine | vmisstestserver001 | Dev | Resource Group | vm-\<policy name or appname>-<###> |
@@ -93,6 +75,14 @@
 | DNS Label | web1.ncus.cloudapp.azure.com | Dev | Global | \<A record of vm>.\[\<region>.cloudapp.azure.com] |
 | Load Balancer | lb-sharepoint-dev-001 | Dev | Resource Group | lb-\<app name or role>-\<environment>-\<###> |
 | NIC | nic-01-vm-prod-001 | Dev | Resource Group | nic-\<##>-\<vmname>-\<subscription>-\<###> |
+
+## Storage Naming
+| Asset type                              | Scope  | Format                                                               | Example               |
+|-----------------------------------------|--------|----------------------------------------------------------------------|-----------------------|
+| Azure Storage account - general use     | Global | st\<storage name>\<###>                                                | stnavigatordata001    |
+| Azure Storage account - diagnostic logs | Global | stdiag\<first 2 letters of subscription name and number>\<region>\<###> | stdiagsh001eastus2001 |
+| StorSimple                              | Global | ssimp\<App Name>\<Environment>                                         | ssimpnavigatorprod    |
+
 
 ## Components ##
 
@@ -259,11 +249,6 @@
 | SQL Server Stretch Database                | Microsoft.Sql/servers/databases                    | sqlstrdb-    |
 | SQL Managed Instance                       | Microsoft.Sql/managedInstances                     | sqlmi-       |
 
-| Asset type                              | Scope  | Format                                                               | Example               |
-|-----------------------------------------|--------|----------------------------------------------------------------------|-----------------------|
-| Azure Storage account - general use     | Global | st\<storage name>\<###>                                                | stnavigatordata001    |
-| Azure Storage account - diagnostic logs | Global | stdiag\<first 2 letters of subscription name and number>\<region>\<###> | stdiagsh001eastus2001 |
-| StorSimple                              | Global | ssimp\<App Name>\<Environment>                                         | ssimpnavigatorprod    |
 
 #### Databse ####
 | Asset type       | Resource provider namespace/Entity | Abbreviation |
@@ -297,7 +282,7 @@
 ## Tagging Conventions ##
 
 | Tag Name                  | Description                                                                                                                                                                                                    | Key             | Example Value                                 | Required? |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------------------------------------------|-----------|
+|---------------------------|------------|--------|-------------|-----------|
 | Application Name          | Name of the application, service, or workload the resource is associated with.                                                                                                                                 | ApplicationName | {app name}                                    | Yes       |
 | Approver Name             | Person responsible for approving costs related to this resource.                                                                                                                                               | Approver        | {email}                                       | Yes       |
 | Budget required/approved  | Money allocated for this application, service or workload.                                                                                                                                                     | BudgetAmount    | {$}                                           | No        |
