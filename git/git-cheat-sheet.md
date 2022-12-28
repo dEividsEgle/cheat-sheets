@@ -9,8 +9,9 @@
 | `git config --global user.name "<username>"`              | Set the username in git config.                     |
 | `git config --global user.email "<useremail@domain.com>"` | Set the user email in git config.                   |
 | `git --global alias.<alias-to-be-set> "<git-command>"`    | Set alias in git config.                            |
-| `git config --global init-defaultBranch <name>`           | I have set up my branch name to be *main* by default. Historicaly git had used *master* as the default branch name.                                                   |
+| `git config --global init.defaultBranch <name>`           | I have set up my branch name to be *main* by default. Historicaly git had used *master* as the default branch name.                                                   |
 
+-----------------------
 ## Basic Git Commands
 | Command                                                                         | Description                                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,6 +38,7 @@
 | `git log --all --graph --decorate --online`                                     | Create a simplified table with all the commits made.                                                                                                                                                                       |
 | `.gitignore`                                                                    | Create a file within git directory where you can add specific files and/or folders to be ignored by git. File paterns can also be specified.                                                                               |
 
+------------------------------------
 ## Git Comparisons
 | Command | Description |
 | --- | --- |
@@ -48,4 +50,58 @@
 | `git diff HEAD HEAD^` | Compare the head and -1. You can use any SHA ID to compare any of the files and their differences. |
 | `git diff <master of HEAD (local)><remote (github)>` <br/> `git diff main origin/main` | Compare the local repository to the remote repository |
 
+-----------------------
 ## Git Branching and Merging
+| Command | Description |
+| --- | --- |
+| `git branch -a` | List both the local and remote branches. |
+| `git branch`  | List all global branches. |
+| `git branch <branch name>` | Create a new branch. |
+| `git checkout <branch name>` | Change branches to move away from the main branch. |
+| `git branch -m <old-name> <new-name>` | Rename a git branch. |
+| `git chekcout -b <branch name>` | Create and change to the new branch immediately.
+| `git diff <master branch> <new branch>` | View the changes between the two branches prior to merging. |
+| `git merge <branch name>` | From the master branch - merge the newly created branch to the master once all the work has been completed (fast forward merge). |
+| `git rebase <source base>` </b> `git rebase master` | Apply any changes to the feature branch from the master branch. |
+| `git rebase --abort` | Abort rebase during a conflict. |
+| `git rebase --continue` | Proceed with the rebase once the conflict issues have been resolved by comparing the differences. |
+| `git fetch` | Update references between the local and remote repository. |
+| `git pull --rebase`  | Rebase the changes from remote repository (GitHub). |
+
+--------------------------------
+## Stashing
+| Command | Description |
+| --- | --- |
+| `git stash` | Stash away any changes that are a work in progress. |
+| `git stash apply` | Put the file back in it's original state. Continue editing the file. |
+| `git stash list` | View the stashed away files. |
+| `git stash drop` | Drop the last stash after you have done `git commit`. |
+| `git stash -u` | Stash any untracked files that are not excluded by *.gitignore*. |
+| `git stash pop` | Apply the stash and drop the last stash from the list. |
+| `git stash show stash @{#}` | Look at a specific stash when dealing with multiple files that contained in stash list. |
+| `git stash apply stash @{#}` | Apply a specific change that has been captured in a stash and is stored in the stash list. |
+| `git stash drop stash @{#}` | Drop a specific file from the stash list. |
+| `git stash clear` | Drop all stashes from the stash list. |
+| `git stash branch <branch name>` | Stash files in different branch. |
+
+------------------------------
+## Git Tagging
+| Command | Description |
+| --- | ---|
+| `git tag <name-of-the-tag>` | Create a lightweight tag on a particular commit. |
+| `git tag --list` | View all created tags. |
+| `git show <tag-name>` | Show commit that is at the tag. |
+| `git tag --delete <tag-name>` | Delete the tag. |
+| `git tag -a v-1.0` | Add annotated tag. Annotated tags can be used for major milestones or version numbers in source code. |
+| `git commit --amend` | Amend the commit message. |
+| `git tag <tag> -m "<comment>"` | Add message to the tag. |
+| `git diff <tag-name> <tag-name>` | Compare the differences between the two tags. |
+| `git tag -a <tag> <commit ID>` | Add a tag to a previous commit using the SHA identifier ID. |
+| `git tag -a <tag-name> -f <commit ID>` | Edit the tag (update). |
+| `git push origin <tag-name>` | Sync the commit and push the tag to GitHub. |
+| `git push origin <branch name> --tags` | Sync the master branch and push all the tags to the remote repository. |
+| `git push origin :<tag-name>` | Delete a tag from the remote repository. (The tag will remain within the local repository.) |
+
+----------------------------------------------------
+
+
