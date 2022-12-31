@@ -1,13 +1,14 @@
-# Linux Cheat Sheet #
-
+# Linux Cheat Sheet 
+--------------------------------------
 Linux cheat sheet that I have put toget from the time that I was familiarising myself with the os. This has helped me a lot along side the built in help tool and the manual pages.
 
-## Linux Basics ##
-
-### Filesystem ###
+---------------------------------------------------
+# Linux Basics 
+----------------------------------------------
+##Filesystem 
 ![image](https://user-images.githubusercontent.com/107066953/206867053-6967e18b-ddbd-4fd9-9d67-86bbc4a18c88.png)
 
-### Basic Linux commands ###
+## Basic Linux commands 
 | Command | Description |
 | --- | --- |
 | `pwd` | Show the current working directory |
@@ -31,7 +32,8 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `rm` | Remove a file |
 | `rmdir` | Remove a directory |
   
-### Text Manipulation ###
+  -------------------------------------
+## Text Manipulation 
 | Command | Description |
 | --- | --- |
 | `head` | Display the first 10 (default) lines in the text |
@@ -43,7 +45,8 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `less` | Show less text and use / to search for terms in the text |
 | `grep` | --- |
 
-### Networkig ###
+--------------------------------
+## Networkig 
 | Command | Description |
 | ------------- | ----------- |
 | `ifconfig` | Display physical int ip configuration |
@@ -54,7 +57,8 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `vm /etc/hosts` | Change local DNS entry |
 | `vm /etc/resolv.conf` | Change DNS server |
 
-### Adding and Removing Software ###
+--------------------------------
+## Adding and Removing Software 
 | Command |	Description |
 | --- | --- |
 | `apt-cache search <package>` |	Search for software in the repository (local) |
@@ -67,7 +71,8 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 | `vm /etc/apt/sources.list` |	Add repositories to query for software |
 | `apt-get synaptic` | Run synaptic from shell (GUI based installer) |
 
-### File and Directory Permissions ###
+-------------------------------
+## File and Directory Permissions 
 | Command                  | Description                               |
 |:------------------------ |:----------------------------------------- |
 | `chown <user><dir/file>` | Change user ownership on a specific file  |
@@ -95,7 +100,8 @@ Octal and Binary Representations of Permissions
 | `umask` |Subtract permissions from a file using binary table (can be set default in .profile). Change default permissions to a file|
 | `suid` |Grant temporary root permissions|
 
-### Process Management ###
+-----------------------------
+## Process Management
 |Command|Description|
 |:----|:----|
 | `ps` |Show active processes|
@@ -118,7 +124,8 @@ Octal and Binary Representations of Permissions
 |SIGTERM|15|Termination (TERM) – kill commands default kill signal|
 |SIGKILL|9|Absoulute kill signal – forces the process to stop by sending the process resources to special device, /dev/null|
 
-### Managing User Environment Variables ###
+------------------------------
+## Managing User Environment Variables 
 |Command|Description|
 |:----|:----|
 | `env` |Manage user set variablesset|Manage all variables (local, shell functions, user-defined variables, command aliases)|
@@ -129,7 +136,8 @@ Octal and Binary Representations of Permissions
 | `PATH=$PATH:/root/newtool` |Add a new directory to the PATH variable (will be queried for commands)|
 | `MYNEWVARIABLE=”<value>”` |Set new variable for later use|
 
-### Compressing and Archiving ###
+---------------------------------------------
+## Compressing and Archiving 
 | Command                           | Description                                                                        |
 | --------------------------------- | ---------------------------------------------------------------------------------- |
 | `tar`  <ul><li>-c (create)</li><li>-v (verbose)</li><li>-f (write)</li><li>-t (display)</li><li>-x (extract)</li></ul>`tar -xvf <archive.tar><file1><file2><file3>`                           | Archive many files into one file with .tar extension <ul><li>Creates the .tar file</li><li>List the files that are being worked on</li><li>Write to the following file</li><li>Display the contents without extracting</li><li>Extract the files</li></ul>                               |
@@ -140,7 +148,8 @@ Octal and Binary Representations of Permissions
 | `bunzip2`                         | Un-compress the compressed files                                                   |
 | `dd <if=inputfile of=outputfile>` | Create a bit-by-bit or physical copies of storage devices, including deleted files |
 
-### File system and Storage device management ###
+-----------------------------------------
+## File system and Storage device management 
 |Command|Description|
 |:----|:----|
 | `/dev` |Directory containing files for each attached device|
@@ -170,7 +179,8 @@ Octal and Binary Representations of Permissions
 |sda2|The second (2) partition of the SATA (a) drive|
 |sda3|The third (3) partition of the SATA (a) drive|
 
-### The Logging System ###
+----------------------------------
+## The Logging System 
 | Command | Description |
 | ---- | ---- |
 | `rsyslog.conf` | Configuration file containing rules of what to log |
@@ -178,13 +188,15 @@ Octal and Binary Representations of Permissions
 | `shred` <br/> `shred -f -n /var/log/auth.log` <br /> <ul><li>`-f`</li><li>`-n`</li></ul> | Shred the log files by generating random symbols making them indecipherable<br/> <ul><li>Give permissions to shared file</li><li>Desired number of times to overwrite</li></ul> |
 | `service <servicename>` `start/stop/restart` | Start or stop rsyslog service |
 
-### Using and Abusing services ###
+---------------------------------------
+## Using and Abusing services ###
 |Command|Description|
 | ---- | ---- |
 | `proxychains <the command to proxy> <argument>` | Send a give command through a proxy to maintain anonymity |
 | `vim /etc/proxychains.conf` | Set proxies in a config file |
 
-### Inspecting Wireless Networks (WiFi) ###
+----------------------------
+## Inspecting Wireless Networks (WiFi) ###
 |Command|Description|
 | ---- | ---- |
 | `ifconfig` | List activated network interfaces|
@@ -198,7 +210,8 @@ Octal and Binary Representations of Permissions
 | `aireplay-ng –deauth 100 -a <mac-address> -c <man-address> wlan0mon` | Force all the AP clients to re-authenticate in order to capture the password hash |
 | `aircrack-ng -w wordlist.cap -b <mac-address> <filename>` | Find the captured password from the list |
 
-### Inspecting Wireless Networks (Bluetooth) ###
+---------------------------------------
+## Inspecting Wireless Networks (Bluetooth) ###
 |Command|Description|
 | ---- | ---- |
 | `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig)|
@@ -218,7 +231,8 @@ Octal and Binary Representations of Permissions
 | `sdptool browse <mac-address>` | Search for Bluetooth services (device does not need to be in discovery mode) |
 | `l2ping <mac-address> -c <number-of-packets>` | Send out a ping to see if the device is within reach |
 
-### Managing the Linux Kernel and Loadable Kernel Modules
+-------------------------
+## Managing the Linux Kernel and Loadable Kernel Modules
 |Command|Description|
 | ---- | ---- |
 | `uname -a` | Check the kernel that the system is running |
@@ -230,7 +244,8 @@ Octal and Binary Representations of Permissions
 | `modprobe -r <module name>` | Remove a module from the kernel |
 | `dsmeg` | Print out a message buffer from the kernel to see if the module has loaded successfully or returned any errors |
 
-### Job Scheduling
+--------------------------------------
+## Job Scheduling
 
 <p align="center"> Time representation for Use in the crontab </p>
 

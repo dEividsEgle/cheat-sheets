@@ -1,5 +1,6 @@
-  ----------
-WSL Ubuntu setup.
+# WSL Ubuntu setup
+----------
+My preferred bash setup in Ubuntu running in WSL.
 
 ---------
 
