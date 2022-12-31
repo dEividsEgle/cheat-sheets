@@ -1,3 +1,9 @@
+## Set up ad-hos connection between two clients
+-------------------------------
+#### Overview
+Enable network connection via two devices using wireless protocol.  Think of ad-hos as a temoparary lan without a centrally managed network device.
+
+--------------------------------------
 1. Open CMD as Adminsitrator
 2. Check for compatibility
 ```

@@ -1,3 +1,9 @@
+## Create local admin account via CMD.
+---------------------------
+#### Overview
+Sometimes when you need access to the computer but it has been kicked off the domain and you do not poses the local admin credentials, however, you do poses the right tools.
+
+----------------------------------
 1. Create the account
 ```
 net user /add [username] [password]

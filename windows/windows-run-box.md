@@ -1,12 +1,12 @@
 # Windows run box shortcuts #
-
+----------------------------------------
 Some quick reference for most common tools used at for work on daily basis.
 
 * Extensions
   * Each .cpl extension is a representation of a tool within control panel. 
   * Each .msc extension is a representation of MS Windwos management console (snap-in).
-        
 
+--------------------------------------------
 | Command | Description |
 | --- | --- |
 | `mstsc` | Remote desktop |
@@ -37,3 +37,4 @@ Some quick reference for most common tools used at for work on daily basis.
 | `inetcpl.cpl` | Internet options |
 | `wf.msc` | Windows firewall with Advanced settings |
 
+----------------------------------------------------

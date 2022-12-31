@@ -201,7 +201,6 @@ Octal and Binary Representations of Permissions
 ### Inspecting Wireless Networks (Bluetooth) ###
 |Command|Description|
 | ---- | ---- |
-<<<<<<< HEAD
 | `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig)|
 | `hcitool` |Inquiry tool: provides device name, device ID, device class, and device clock information (enables the device to work synchronously)|
 | `hcidump` |Sniff the Bluetooth communications (capture data sent over Bluetooth signal)|
@@ -209,8 +208,7 @@ Octal and Binary Representations of Permissions
 | `hcitool scan` |Check for Bluetooth devices sending out them discover beacons (discovery mode)|
 | `hcitool inq` |Gather information about the detected devices|
 | `sdptool browse <mac-address>` |Search for Bluetooth services (device does not need to be in discovery mode)|
-| `l2ping <mac-address> -c <number-of-packets>` |Send out a ping to see if the device is within reach|
-=======
+| `l2ping <mac-address> -c <number-of-packets>` |Send out a ping to see if the device is within the reach |
 | `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig) |
 | `hcitool` | Inquiry tool: provides device name, device ID, device class, and device clock information (enables the device to work synchronously) |
 | `hcidump` | Sniff the Bluetooth communications (capture data sent over Bluetooth signal) |
@@ -219,7 +217,6 @@ Octal and Binary Representations of Permissions
 | `hcitool inq` | Gather information about the detected devices |
 | `sdptool browse <mac-address>` | Search for Bluetooth services (device does not need to be in discovery mode) |
 | `l2ping <mac-address> -c <number-of-packets>` | Send out a ping to see if the device is within reach |
->>>>>>> 05cb6a33c07c9b806e92c31ce98d02edcf2236f2
 
 ### Managing the Linux Kernel and Loadable Kernel Modules
 |Command|Description|
