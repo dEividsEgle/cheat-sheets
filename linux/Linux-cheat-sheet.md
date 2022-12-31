@@ -165,19 +165,20 @@ Octal and Binary Representations of Permissions
 
 <p align="center"> Device naming system </p>
 
-|Device File|Description|
-|:---:|:---:|
-|sda|First SATA drive|
-|sdb|Second SATA drive|
-|sdc|Third SATA drive|
-|sdd|Fourth SATA Drive|
+| Device File | Description |
+| :---: | :---: |
+| sda | First SATA drive |
+| sdb | Second SATA drive |
+| sdc | Third SATA drive |
+| sdd | Fourth SATA Drive |
 
 <p align="center"> Partition labeling system </p>
-|Partition|Description|
-|:---:|:---:|
-|sda1|The first partition (1) of the SATA (a) drive|
-|sda2|The second (2) partition of the SATA (a) drive|
-|sda3|The third (3) partition of the SATA (a) drive|
+
+| Partition | Description |
+| :---: | :---: |
+| sda1 | The first partition (1) of the SATA (a) drive |
+| sda2 | The second (2) partition of the SATA (a) drive |
+| sda3 | The third (3) partition of the SATA (a) drive |
 
 ----------------------------------
 ## The Logging System 
