@@ -1,0 +1,15 @@
+# Devices
+
+| Devices                                            | Description                                                                                                                                                                                             |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dev/xvd*`</br>`dev/vd*`                           | Virtual disks.                                                                                                                                                                                          |
+| `dev/nvme*`                                        | Non-Volatile Memory Devices. Use `nvme` list command to get a listing of these devices.                                                                                                                 |
+| `/dev/dm-*`</br>`/dev/mapper/*`                    | Device Mapper.                                                                                                                                                                                          |
+| `/dev/sr*`                                         | CD and DVD Drives. Linux recognises most storage drives as the SCSI devices */dev/sr0*, */dev/sr1*, etc. The `/dev/sr*` devices are read-only. For the write and rewrite you must use the SCSI devices. |
+| `/dev/hd*`                                         | PATA Hard Disks (Parallel ATA). These are older type of storage bus.                                                                                                                                    |
+| `/dev/tty*`</br>`/dev/pts/*`</br>`/dev/tty`        | Terminals used to move characters between user process and I/O device.                                                                                                                                  |
+| `/dev/ttyS*`</br>`/dev/ttyUSB*`</br>`/dev/ttyACM*` | Serial ports. Older RS-232 type and similar serial ports are represented as true terminal devices. The ports known as COM1 on Windows is `/dev/ttyS0`, and so on.                                       |
+| `/dev/Ip0`</br>`/dev/Ip1`                          | Parallel Ports. The unidirectional parallel ports correspond to LPT1 and LPT2 in Windows. Files can be sen to parallel ports with the `cat` command.                                                    |
+| `/dev/paraport0`</br>`/dev/paraport1/`             | Bidirectional parallel ports.                                                                                                                                                                           |
+| `/dev/snd/*`</br>`/dev/dsp`</br>`/dev/audio`       | Audio Devices.                                                                                                                                                                                                        |
+
