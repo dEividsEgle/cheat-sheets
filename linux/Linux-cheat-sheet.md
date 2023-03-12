@@ -5,35 +5,39 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 ---------------------------------------------------
 # Linux Basics 
 ----------------------------------------------
-##Filesystem 
+## Filesystem 
+
 ![image](https://user-images.githubusercontent.com/107066953/206867053-6967e18b-ddbd-4fd9-9d67-86bbc4a18c88.png)
 
+----
 ## Basic Linux commands 
-| Command | Description |
-| --- | --- |
-| `pwd` | Show the current working directory |
-| `whoami` | Show the current user |
-| `ls` | List the contents of directory |
-| `ls -l` | Long list the contents of directory |
-| `ls -la` | Long list the contents of directory including hidden files |
-| `<command> --help (-h)` | Get help for a specific command |
-| `man <command>` | View manual for a specific command |
-| `locate <keyword>` | Go through the file system to locate the specific keywoard |
-| `whereis` | Find binaries (binary files) |
-| `which` | Return location of the binary in the PATH variable |
-| `find <dir> -type <type(dir or file)> -name <name-to-be-found>` | Specify the directory and start a search to find the matching query |
-| `ps aux` | List all running processes |
-| `ps` | List currently running processes (user) |
-| `cat` | Display contents of the file or use redirect to create a file |
-| `touch` | Create a file |
-| `mkdir` | Create a directory |
-| `cp <source file> </dir/new-file>` | Copy a file |
-| `mv` | Move a file (also used to rename a file) |
-| `rm` | Remove a file |
-| `rmdir` | Remove a directory |
+
+| Command                                                         | Description                                                                            |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `pwd`                                                           | Show the current working directory                                                     |
+| `whoami`                                                        | Show the current user                                                                  |
+| `ls`                                                            | List the contents of directory                                                         |
+| `ls -l`                                                         | Long list the contents of directory                                                    |
+| `ls -la`                                                        | Long list the contents of directory including hidden files                             |
+| `<command> --help (-h)`                                         | Get help for a specific command                                                        |
+| `man <command>`                                                 | View manual for a specific command                                                     |
+| `locate <keyword>`                                              | Go through the file system to locate the specific keywoard                             |
+| `whereis`                                                       | Find binaries (binary files)                                                           |
+| `which`                                                         | Return location of the binary in the PATH variable                                     |
+| `find <dir> -type <type(dir or file)> -name <name-to-be-found>` | Specify the directory and start a search to find the matching query                    |
+| `ps aux`                                                        | List all running processes                                                             |
+| `ps`                                                            | List currently running processes (user)                                                |
+| `cat`</br>`cat -n`                                              | Display contents of the file or use redirect to create a file</br>Display line numbers |
+| `touch`                                                         | Create a file                                                                          |
+| `mkdir`                                                         | Create a directory                                                                     |
+| `cp <source file> </dir/new-file>`                              | Copy a file                                                                            |
+| `mv`                                                            | Move a file (also used to rename a file)                                               |
+| `rm`                                                            | Remove a file                                                                          |
+| `rmdir`                                                         | Remove a directory                                                                     |
   
-  -------------------------------------
+-------------------------------------
 ## Text Manipulation 
+
 | Command | Description |
 | --- | --- |
 | `head` | Display the first 10 (default) lines in the text |
@@ -47,6 +51,7 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 
 --------------------------------
 ## Networkig 
+
 | Command | Description |
 | ------------- | ----------- |
 | `ifconfig` | Display physical int ip configuration |
@@ -59,6 +64,7 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 
 --------------------------------
 ## Adding and Removing Software 
+
 | Command |	Description |
 | --- | --- |
 | `apt-cache search <package>` |	Search for software in the repository (local) |
@@ -73,6 +79,7 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 
 -------------------------------
 ## File and Directory Permissions 
+
 | Command                  | Description                               |
 |:------------------------ |:----------------------------------------- |
 | `chown <user><dir/file>` | Change user ownership on a specific file  |
@@ -83,16 +90,16 @@ Linux cheat sheet that I have put toget from the time that I was familiarising m
 Octal and Binary Representations of Permissions 
 </p>
 
-| Binary | Octal | rwx |
-|:------:|:-----: |:------: |
-|  000   | 0     | --- |
-|  001   | 1     | --x |
-|  010   | 2     | -w- |
-|  011   | 3     | -wx |
-|  100   | 4     | r-- |
-|  101   | 5     | r-x |
-|  110   | 6     | rw- |
-|  111   | 7     | rwx |
+| Binary | Octal | String | Description             |
+|:------:|:-----:|:------:| ----------------------- |
+|  000   |   0   |  ---   | No Permission           |
+|  001   |   1   |  --x   | Execute Only            |
+|  010   |   2   |  -w-   | Write Only              |
+|  011   |   3   |  -wx   | Write and Execute (2+1) |
+|  100   |   4   |  r--   | Read Only               |
+|  101   |   5   |  r-x   | Read and Execute (4+1)  |
+|  110   |   6   |  rw-   | Read and Write (4+2)    |
+|  111   |   7   |  rwx   | Read, Write, and Execute (4+2+1)                        |
 
 | `chmod 774 <file>` |Change permissions on file for owner/group/other to rwxrwxr|
 |:----|:----|
@@ -102,6 +109,7 @@ Octal and Binary Representations of Permissions
 
 -----------------------------
 ## Process Management
+
 |Command|Description|
 |:----|:----|
 | `ps` |Show active processes|
@@ -126,6 +134,7 @@ Octal and Binary Representations of Permissions
 
 ------------------------------
 ## Managing User Environment Variables 
+
 |Command|Description|
 |:----|:----|
 | `env` |Manage user set variablesset|Manage all variables (local, shell functions, user-defined variables, command aliases)|
@@ -138,18 +147,20 @@ Octal and Binary Representations of Permissions
 
 ---------------------------------------------
 ## Compressing and Archiving 
-| Command                           | Description                                                                        |
-| --------------------------------- | ---------------------------------------------------------------------------------- |
-| `tar`  <ul><li>-c (create)</li><li>-v (verbose)</li><li>-f (write)</li><li>-t (display)</li><li>-x (extract)</li></ul>`tar -xvf <archive.tar><file1><file2><file3>`                           | Archive many files into one file with .tar extension <ul><li>Creates the .tar file</li><li>List the files that are being worked on</li><li>Write to the following file</li><li>Display the contents without extracting</li><li>Extract the files</li></ul>                               |
-| `gzip (.tar.gz / .tgz)`           | Most common - falls between compress and bzip2                                     |
-| `bzip2 (.tar.bz2)`                | Slowest - resultant files are the smallest                                         |
-| `compress (.tar.z)`               | Fastest - resultant files are the largest                                          |
-| `uncompress`                      | Un-compress the compressed files                                                   |
-| `bunzip2`                         | Un-compress the compressed files                                                   |
-| `dd <if=inputfile of=outputfile>` | Create a bit-by-bit or physical copies of storage devices, including deleted files |
+
+| Command                                                                                                                                                             | Description                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tar`  <ul><li>-c (create)</li><li>-v (verbose)</li><li>-f (write)</li><li>-t (display)</li><li>-x (extract)</li></ul>`tar -xvf <archive.tar><file1><file2><file3>` | Archive many files into one file with .tar extension <ul><li>Creates the .tar file</li><li>List the files that are being worked on</li><li>Write to the following file</li><li>Display the contents without extracting</li><li>Extract the files</li></ul> |
+| `gzip (.tar.gz / .tgz)`                                                                                                                                             | Most common - falls between compress and bzip2                                                                                                                                                                                                             |
+| `bzip2 (.tar.bz2)`                                                                                                                                                  | Slowest - resultant files are the smallest                                                                                                                                                                                                                 |
+| `compress (.tar.z)`                                                                                                                                                 | Fastest - resultant files are the largest                                                                                                                                                                                                                  |
+| `uncompress`                                                                                                                                                        | Un-compress the compressed files                                                                                                                                                                                                                           |
+| `bunzip2`                                                                                                                                                           | Un-compress the compressed files                                                                                                                                                                                                                           |
+| `dd <if=inputfile of=outputfile>`                                                                                                                                   | Create a bit-by-bit or physical copies of storage devices, including deleted files                                                                                                                                                                         |
 
 -----------------------------------------
 ## File system and Storage device management 
+
 |Command|Description|
 |:----|:----|
 | `/dev` |Directory containing files for each attached device|
@@ -182,6 +193,7 @@ Octal and Binary Representations of Permissions
 
 ----------------------------------
 ## The Logging System 
+
 | Command | Description |
 | ---- | ---- |
 | `rsyslog.conf` | Configuration file containing rules of what to log |
@@ -190,14 +202,16 @@ Octal and Binary Representations of Permissions
 | `service <servicename>` `start/stop/restart` | Start or stop rsyslog service |
 
 ---------------------------------------
-## Using and Abusing services ###
+## Using and Abusing services 
+
 |Command|Description|
 | ---- | ---- |
 | `proxychains <the command to proxy> <argument>` | Send a give command through a proxy to maintain anonymity |
 | `vim /etc/proxychains.conf` | Set proxies in a config file |
 
 ----------------------------
-## Inspecting Wireless Networks (WiFi) ###
+## Inspecting Wireless Networks (WiFi) 
+
 |Command|Description|
 | ---- | ---- |
 | `ifconfig` | List activated network interfaces|
@@ -212,7 +226,8 @@ Octal and Binary Representations of Permissions
 | `aircrack-ng -w wordlist.cap -b <mac-address> <filename>` | Find the captured password from the list |
 
 ---------------------------------------
-## Inspecting Wireless Networks (Bluetooth) ###
+## Inspecting Wireless Networks (Bluetooth) 
+
 |Command|Description|
 | ---- | ---- |
 | `hciconfig` | Look at the Bluetooth interfaces (works like ifconfig)|
@@ -234,6 +249,7 @@ Octal and Binary Representations of Permissions
 
 -------------------------
 ## Managing the Linux Kernel and Loadable Kernel Modules
+
 |Command|Description|
 | ---- | ---- |
 | `uname -a` | Check the kernel that the system is running |
